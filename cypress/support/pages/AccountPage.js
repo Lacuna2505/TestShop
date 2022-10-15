@@ -9,5 +9,9 @@ class accountPage extends BasePage{
    getUserNameFromHeading(){
         return cy.get('h1.heading1');
    }
+
+   getAlertText(){
+        return cy.get('div.alert-error');
+   }
 }
 export default new accountPage();

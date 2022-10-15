@@ -1,6 +1,6 @@
 ///<reference types="cypress"/>
-import authorizationPage from '../support/AuthorizationPage.js';
-import accountPage from '../support/AccountPage.js';
+import authorizationPage from '../support/pages/AuthorizationPage.js';
+import accountPage from '../support/pages/AccountPage.js';
 import user from '../fixtures/user.json';
 
 it('Authorization', () => {
