@@ -1,24 +1,37 @@
 ///<reference types="cypress"/>
 import registrationPage from '../support/pages/RegistrationPage.js';
-import {faker} from '@faker-js/faker';
 
-let user = {
-  firstName: faker.name.firstName(),
-  lastName:faker.name.lastName(),
-  email: faker.internet.email(),
-  address: faker.address.streetAddress(),
-  city: faker.address.city(),
-  postcode: faker.address.zipCode(),
-  userName: faker.internet.userName(),
-  password: faker.internet.password(15)
-}
 
 it('Registration', () => {
     registrationPage.visit();
-  
-    registrationPage.typeTextInFirstNameField(user.firstName);
-    registrationPage.typeTextInLastNameField(user.lastName);
-    registrationPage.typeTextInEmailField(user.email);
+  registrationPage.firstNameField();
+    registrationPage.typeTextInFirstNameField();
+    registrationPage.lastNameField();
+    registrationPage.typeTextInLastNameField();
+    registrationPage.emailField();
+    registrationPage.typeTextInEmailField();
+    registrationPage.addressField();
+    registrationPage.typeTextInAddressField();
+    registrationPage.cityField();
+    registrationPage.typeInCityField();
+    registrationPage.zoneId();
+    registrationPage.selectZoneid();
+    registrationPage.postCode();
+    registrationPage.typePostCode();
+    registrationPage.countryId();
+    registrationPage.selectCountryId();
+    registrationPage.loginName();
+    registrationPage.typeLoginName();
+    registrationPage.accPass();
+    registrationPage.typeAccPass();
+    registrationPage.confirmPass();
+    registrationPage.typeConfirmPass();
+    registrationPage.newsLetter();
+    registrationPage.clickOnNewsLetter();
+    registrationPage.formAgree().check();
+    registrationPage.continueButton;
+    registrationPage.clickOnContinueButton();
+    registrationPage.registrationCheck;
 
   
   })

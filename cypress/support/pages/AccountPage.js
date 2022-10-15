@@ -1,6 +1,6 @@
-import BasePage from "./BasePage";
+import basePage from "./BasePage";
 
-class accountPage extends BasePage{
+class AccountPage extends basePage{
     visit(){
         cy.log('**Open login page**');
         cy.visit('/index.php?rt=account/account');
@@ -14,4 +14,4 @@ class accountPage extends BasePage{
         return cy.get('div.alert-error');
    }
 }
-export default new accountPage();
+export default new AccountPage();

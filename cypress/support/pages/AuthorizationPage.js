@@ -1,6 +1,6 @@
-import BasePage from "./BasePage";
+import basePage from "./BasePage";
 
-class AuthorizationPage extends BasePage{
+class AuthorizationPage extends basePage{
     visit(){
         cy.log('**Open login page**');
         cy.visit('/index.php?rt=account/login');

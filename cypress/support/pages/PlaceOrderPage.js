@@ -1,38 +1,51 @@
-import BasePage from "./BasePage";
+import basePage from "./BasePage";
 
-class placeOrderPage extends BasePage{
+class PlaceOrderPage extends basePage{
     visit(){
         cy.log('**Open place Order Page**');
         cy.visit('/index.php?rt=product/product&product_id=52')
     }
 
     chooseProductQuantity(){
-        cy.get('#product_quantity');
-        this.chooseProductQuantity().clear();
+        return cy.get('#product_quantity');
+        
     }
+    
+    clickOnTheProductQuantity(){
+       this.chooseProductQuantity().click();
+     }
 
     addToCart(){
-        cy.get('.productpagecart');
+        return cy.get('.productpagecart');
+        
+    }
+    clickOnAddToCart(){
         this.addToCart().click();
     }
 
-    checkoutbutton(){
-        cy.get('#cart_checkout1');
-        this.checkoutbutton().click;
+    checkoutButton(){
+        return cy.get('#cart_checkout1');
+        
+    }
+
+    clickOnCheckoutButton(){
+        this.checkoutButton().click();
     }
 
     confirmOrder(){
-        cy.get('#checkout_btn');
-        this.confirmOrder.click();
+        return cy.get('#checkout_btn');
+    }
+
+    clickOnConfirmOrder(){
+        this.confirmOrder().click();
     }
 
     orderCheck1(){
         return cy.get('h1.heading1');
-        
-    }
+        }
 
     orderCheck2(){
         return cy.get('.contentpanel');
     }
 }
-export default new placeOrderPage();
+export default new PlaceOrderPage();
