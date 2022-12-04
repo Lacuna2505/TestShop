@@ -1,6 +1,6 @@
 ///<reference types="cypress"/>
 import user from '../fixtures/user.json';
-import {searchExistingProduct} from '../support/helper'
+import {searchEProduct, searchExistingProduct} from '../support/helper'
 
 it.skip('Place order', () => {
 
@@ -28,6 +28,7 @@ it('Place order via search', () => {
   cy.visit('/');
 
   searchExistingProduct('Benefit Bella Bamba');
+  searchProduct();
 
   cy.get('#product_quantity').clear().type('4');
   cy.get('.productpagecart').click();
